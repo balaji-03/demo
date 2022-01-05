@@ -4,6 +4,6 @@ b=[]
 b=a[::-1]
 c=''.join(b)
 if c == string:
-	print("%s is a palindrome"%string)
+	print("Its a palindrome")
 else:
-	print("%s is not a palindrome"%string)
+	print("Not a palindrome")
