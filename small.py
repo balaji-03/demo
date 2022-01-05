@@ -1,5 +1,5 @@
 num=[]
-number=int(input("Enter the elements in the list"))
+number=int(input("Enter the number of elements in the list"))
 for i in range(number):
     value=int(input("Enter the %d element in the array"%i))
     num.append(value)
