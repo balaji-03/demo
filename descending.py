@@ -15,4 +15,4 @@ while(i<len(num)):
 			num[j]=temp
 		j=j+1
 	i=i+1
-print(num)
+print("The descending order is",num)

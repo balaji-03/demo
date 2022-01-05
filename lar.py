@@ -8,5 +8,5 @@ for j in range(1,number):
   if num[j]>temp: 
        large=num[j]
        temp=num[j]
-print(large)
+print("the largest number in array is",large)
 
