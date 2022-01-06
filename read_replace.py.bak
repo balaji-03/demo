@@ -5,7 +5,7 @@ arr=[]
 for i in f:
     c=i.split()
     for j in c:
-        d=j.replace(old,new)
+        j.replace(old,new))
         arr.append(d)
 print(arr)        
         
