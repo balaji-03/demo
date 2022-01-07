@@ -6,9 +6,6 @@ for i in range(1,number+1):
 temp=num[0]
 for j in range(1,number):
   if num[j]>temp: 
-       large=num[j]
        temp=num[j]
-  else:
-       large=temp
-print("the largest number in array is ",large)
+print("the largest number in array is ",temp)
 
