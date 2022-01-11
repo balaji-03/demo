@@ -1,14 +1,43 @@
-
-def dic(a):
-    with open("D:\\Balaji\\Git\\Demo\\Dictionary.txt") as dicty:
-        for i in dicty:
-            for j in i.split():
-                if j == a:
-                    print(a)
-                if j!=a:
-                    print(j)
-with open("D:\\Balaji\\Git\\Demo\\users.txt" )as users:
-    for k in users:
+def list1(a):
+    with open("users.txt") as users:
+        for line in users:
+            for word in line.split(): 
+                if word != a:
+                    print(word)
+                    
+            else:
+                print("not present")
+                break
+                    
+with open("dictionary.txt") as dic:
+    for k in dic:
         for l in k.split():
-            dic(l)
-           
+            list1(l)
+ 
+"""string=input("Enter the word")
+#def args(b):
+with open("dictionary.txt") as dic:
+    for k in dic:
+        for word1 in k.split():
+            if word1 == string:
+                print("word present")
+                break
+        else:
+            print("not present")"""
+         
+    
+            
+                
+                
+                
+                        
+                        
+                        
+                            
+                   
+                        
+"""
+with open("users.txt") as users:
+    for line in users:
+        for word in line.split():
+            args(word)       """
