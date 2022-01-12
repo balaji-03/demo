@@ -1,4 +1,3 @@
-						PROGRAMMING LANGUAGES
 MonogoDB
 Express
 React

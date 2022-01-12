@@ -1,0 +1,9 @@
+Python is a multi-paradigm programming language.
+Object-oriented programming and structured programming are fully supported,
+and many of its features support functional programming and aspect-oriented programming (including by metaprogramming[59] and metaobjects (magic methods)).[60] Many other paradigms are supported via extensions, including design by contract[61][62] and logic programming.[63]  
+hi i am wrtiny
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Readability counts.
