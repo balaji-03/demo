@@ -8,8 +8,8 @@ def list1(a):
                     break
         if b == 0:
             dic.write(a)
+            print('\n')
             dic.write(score)
-            dic.write
             dic.close()    
 with open("users.txt") as users:
     for k in users:
