@@ -1,20 +1,41 @@
 def list1(a):
     b=0
-    with open("dictionary.txt") as dic:
+    with open("D:\\Balaji\\Git\\Demo\\dictionary.txt") as dic:
         for line in dic:
             for word in line.split():
                 if word == a:
                     b=2
                     break
+        print(a)
         if b == 0:
-            dic.write(a)
-            print(\n)
-            dic.write(score)
-            dic.close()    
+            choice=input("add or modify")
+            if choice == "add":
+                with open("D:\\Balaji\\Git\\Demo\\dictionary.txt","a+") as dic:
+                    dic.write(a+" ")
+                    dic.close()
+            if choice == "modify":
+                modify=input("enter the word to be modified ")
+                new=input("enter the correct word ")
+                with open(r"D:\\Balaji\\Git\\Demo\\users.txt","r") as users:
+                    content=users.read()
+                    content.replace(modify,new) 
+                    users.close()
+                with open(r"D:\\Balaji\\Git\\Demo\\users.txt","w") as users:
+                    content=users.read()
+                    content.replace(modify,new) 
+                    users.close()   
+"""
+ with open(r"D:\\Balaji\\Git\\Demo\\users.txt","w") as users:
+    users.write(content)  
+    users.close()
+"""
 with open("users.txt") as users:
     for k in users:
         for l in k.split():
             list1(l)
+            
+            
+       
 """           
 string=input("Enter the word")
 #def args(b):
@@ -32,9 +53,3 @@ with open("dictionary.txt") as dic:
      """   
     
                    
-                        
-"""
-with open("users.txt") as users:
-    for line in users:
-        for word in line.split():
-            args(word)       """
