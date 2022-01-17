@@ -12,3 +12,11 @@ Name : philo
 Mobile_no : 8903366993
 Dep : 'hardware'
 email : philo@gmail.com
+
+Name : balajee
+Mobile_no : 6721797987
+
+Name : omkar
+Mobile_no : 7979868797
+Department : cse
+email :omkar@gmail.com

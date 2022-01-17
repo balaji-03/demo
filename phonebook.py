@@ -3,12 +3,13 @@ def phone(x):
         case '1':
             with open("D:\\Balaji\\Git\\Demo\\phone.txt","a+") as phone:
                 Name=input("Name : ")
-                Mobile_no=input("Mobile_no ")
-                Age = input(" Age : ")
+                Mobile_no=input("Mobile_no : ")
+                Dep = input("Department : ")
                 email=input(" email : ")
+                
                 phone.write('\n'+'\n'+'Name : '+Name)
                 phone.write('\n'+'Mobile_no : '+Mobile_no)
-                phone.write('\n'+'Age : '+Age)
+                phone.write('\n'+'Department : '+Dep)
                 phone.write('\n'+'email :'+email)
         case '2':
                 modify=input("enter the word to be modified ")
@@ -17,15 +18,39 @@ def phone(x):
                     ch=phone.read()  
                     ch=ch.replace(modify,new)
                 with open(r"D:\\Balaji\\Git\\Demo\\phone.txt","w") as phone:
-                    phone.write(ch)               
-                    
+                    phone.write(ch)                
         case '3':
-                pass
+                enter_word = input("Enter the name of person whose details can be fetched : ")
+                phone=open(r"D:\\Balaji\\Git\\Demo\\phone.txt","r")
+                ispre=0
+                for i in phone: 
+                    c = i.split()
+                    for j in c:
+                        if j == enter_word:
+                            if j == 'balajee':
+                                details={j:{'Name' : j,'Mobile_no': '7904629044','Dep' : 'coding','email' :'balajee@gmail.com'}}
+                            if j == 'baby':
+                                details={j:{'Name' : j,'Mobile_no': '7906879866','Dep' : 'coding','email' : 'baby@gmail.com'}}
+                            if j == 'philo':
+                                details={j:{'Name' : j,'Mobile_no': '8903366993','Dep' : 'hardware','email ': 'philo@gmail.com'}}
+                            print(details)
+                            ispre = 1
+                            break
+                if ispre == 0:
+                    print("Enter the correct word ")
+                                 
+                phone.close()
         case  '4':
-            print("better luck ")
+                modify=input("enter the word to be deleted ")
+                with open(r"D:\\Balaji\\Git\\Demo\\phone.txt","r") as phone:
+                    che=phone.read()  
+                    che=che.replace(modify,"")
+                with open(r"D:\\Balaji\\Git\\Demo\\phone.txt","w") as phone:
+                    phone.write(che)                
         case _ :
             print("Enter the right choice")
-a=input("enter choice ")  
+print("\n 1.Add \n 2.Find & replace \n 3.Extract the details \n 4.Delete the word everywhere \n")  
+a=input("Enter the choice ")
 phone(a)
 """
 import fileinput

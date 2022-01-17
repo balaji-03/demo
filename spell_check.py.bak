@@ -8,19 +8,20 @@ def list1(a):
                     break
         print(a)
         if b == 0:
-            choice=input("add or modify")
+            choice=input("Whether cuurent word has to be add or modify : ")
             if choice == "add":
                 with open("D:\\Balaji\\Git\\Demo\\dictionary.txt","a+") as dic:
                     dic.write(a+" ")
                    
             if choice == "modify":
-                modify=input("enter the word to be modified ")
+                modify=input("enter the old word ")
                 new=input("enter the correct word ")
                 with open(r"D:\\Balaji\\Git\\Demo\\users.txt","r") as users:
-                    content=users.read()                
+                    for l in users:
+                        content=users.read() 
+                        content=content.replace(modify,new)
                 with open(r"D:\\Balaji\\Git\\Demo\\users.txt","w") as users:
-                    content.replace(modify,new) 
-                    users.write(content)
+                    users.write('\n'+content)
 with open("users.txt") as users:
     for k in users:
         for l in k.split():
