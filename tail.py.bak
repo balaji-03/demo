@@ -18,5 +18,4 @@ def lastline(k,r):
         if i>=d-(user):
             print(line1)
 if  string =='tail('+f+','+g+')':
-    print('yes')
     lastline(f,g)

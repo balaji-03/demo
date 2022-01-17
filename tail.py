@@ -9,7 +9,7 @@ s= input("Enter function name: ").split('\b')
 string=""
 for element in s:
     string += element 
-f=s[0][5]
+f=s[0][5:7]
 g=s[0][7:-1]
 def lastline(k,r):
     b=open("D:\\Balaji\\Git\\Demo\\"+r+'.'+'txt')   

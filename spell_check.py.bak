@@ -12,23 +12,15 @@ def list1(a):
             if choice == "add":
                 with open("D:\\Balaji\\Git\\Demo\\dictionary.txt","a+") as dic:
                     dic.write(a+" ")
-                    dic.close()
+                   
             if choice == "modify":
                 modify=input("enter the word to be modified ")
                 new=input("enter the correct word ")
                 with open(r"D:\\Balaji\\Git\\Demo\\users.txt","r") as users:
-                    content=users.read()
-                    content.replace(modify,new) 
-                    users.close()
+                    content=users.read()                
                 with open(r"D:\\Balaji\\Git\\Demo\\users.txt","w") as users:
-                    content=users.read()
                     content.replace(modify,new) 
-                    users.close()   
-"""
- with open(r"D:\\Balaji\\Git\\Demo\\users.txt","w") as users:
-    users.write(content)  
-    users.close()
-"""
+                    users.write(content)
 with open("users.txt") as users:
     for k in users:
         for l in k.split():
