@@ -1,0 +1,80 @@
+def phone(x):
+    match x:
+        case '1':
+            with open("D:\\Balaji\\Git\\Demo\\phone.txt","a+") as phone:
+                Name=input("Name : ")
+                Mobile_no=input("Mobile_no : ")
+                Dep = input("Department : ")
+                email=input(" email : ")
+                
+                phone.write('\n'+'\n'+'Name : '+Name)
+                phone.write('\n'+'Mobile_no : '+Mobile_no)
+                phone.write('\n'+'Department : '+Dep)
+                phone.write('\n'+'email :'+email)
+        case '2':
+                modify=input("enter the word to be modified ")
+                new=input("enter the correct word ")
+                with open(r"D:\\Balaji\\Git\\Demo\\phone.txt","r") as phone:
+                    ch=phone.read()  
+                    ch=ch.replace(modify,new)
+                with open(r"D:\\Balaji\\Git\\Demo\\phone.txt","w") as phone:
+                    phone.write(ch)                
+        case '3':
+                enter_word = input("Enter the name of person whose details can be fetched : ")
+                phone=open(r"D:\\Balaji\\Git\\Demo\\phone.txt","r")
+                ispre=0
+                for i in phone: 
+                    c = i.split()
+                    for j in c:
+                        if j == enter_word:
+                            print('\n'+''.join(c)+'\n')
+                            print(phone.readline(60))
+                            print(phone.readline(60))
+                            print(phone.readline(60))
+                            ispre = 1
+                            break
+                if ispre == 0:
+                    print("Enter the correct word ")             
+                phone.close()
+        case  '4':
+                modify=input("enter the details to be deleted ")
+                with open(r"D:\\Balaji\\Git\\Demo\\phone.txt","r") as phone:
+                    for i in phone:
+                        c=i.split()
+                        for j in c:
+                            if j == modify:
+                                b=phone.read()
+                                b.replace('\n'+''.join(c)+'\n',"")
+                                """phone.readline().replace(phone.read(50),"")
+                                phone.readline().replace(phone.read(50),"")
+                                phone.readline().replace(phone.read(50),"")"""
+                with open(r"D:\\Balaji\\Git\\Demo\\phone.txt","w+") as phone:
+                    for i in phone:
+                        c=i.split()
+                        for j in c:
+                            phone.write( phone.read().replace('\n'+''.join(c)+'\n',"")) 
+                phone.close()
+        case _ :
+            print("Enter the right choice")
+print("\n 1.Add \n 2.Find & replace \n 3.Extract the details \n 4.Delete the word everywhere \n")  
+a=input("Enter the choice ")
+phone(a)
+"""
+import fileinput
+print ("Text to search for:")
+textToSearch = input( "> " )
+print ("Text to replace it with:")
+textToReplace = input( "> " )
+print ("File to perform Search-Replace on:")
+fileToSearch  = input( "> " )
+#fileToSearch = 'D:\dummy1.txt'
+tempFile = open( fileToSearch, 'r+' )
+for line in fileinput.input( fileToSearch ):
+    if textToSearch in line :
+        print('Match Found')
+    else:
+        print('Match Not Found!!')
+    tempFile.write( line.replace( textToSearch, textToReplace ) )
+tempFile.close()
+input( '\n\n Press Enter to exit...' )
+print("""
